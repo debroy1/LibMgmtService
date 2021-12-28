@@ -1,0 +1,64 @@
+2021-12-12 20:43:06.163 - INFO 11240 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 98 ms. Found 1 JPA repository interfaces.
+-2021-12-12 20:43:06.272 - WARN 11240 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'hystrix.stream' contains invalid characters, please migrate to a valid format.
+-2021-12-12 20:43:06.356 - INFO 11240 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=75a0fc6c-b16b-3ba1-aa9f-88f200b52bea
+-2021-12-12 20:43:06.713 - INFO 11240 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+-2021-12-12 20:43:06.720 - INFO 11240 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+-2021-12-12 20:43:06.720 - INFO 11240 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
+-2021-12-12 20:43:06.842 - INFO 11240 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+-2021-12-12 20:43:06.842 - INFO 11240 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1416 ms
+-2021-12-12 20:43:06.929 - WARN 11240 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+-2021-12-12 20:43:06.929 - INFO 11240 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+-2021-12-12 20:43:06.940 - INFO 11240 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@6326c5ec
+-2021-12-12 20:43:07.018 - INFO 11240 --- [main] o.s.b.a.e.web.ServletEndpointRegistrar   : Registered '/actuator/hystrix.stream' to hystrix.stream-actuator-endpoint
+-2021-12-12 20:43:07.133 - INFO 11240 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+-2021-12-12 20:43:07.173 - INFO 11240 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.1.Final
+-2021-12-12 20:43:07.294 - INFO 11240 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+-2021-12-12 20:43:07.368 - INFO 11240 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+-2021-12-12 20:43:07.610 - INFO 11240 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+-2021-12-12 20:43:07.633 - INFO 11240 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+-2021-12-12 20:43:08.077 - INFO 11240 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+-2021-12-12 20:43:08.083 - INFO 11240 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+-2021-12-12 20:43:08.407 - WARN 11240 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+-2021-12-12 20:43:08.408 - INFO 11240 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+-2021-12-12 20:43:08.440 - WARN 11240 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+-2021-12-12 20:43:09.120 - INFO 11240 --- [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+-2021-12-12 20:43:09.165 - WARN 11240 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+-2021-12-12 20:43:09.175 - INFO 11240 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 19 endpoint(s) beneath base path '/actuator'
+-2021-12-12 20:43:09.244 - INFO 11240 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 51428 (http) with context path ''
+-2021-12-12 20:43:09.245 - INFO 11240 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 51428
+-2021-12-12 20:43:09.249 - INFO 11240 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+-2021-12-12 20:43:09.291 - INFO 11240 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+-2021-12-12 20:43:09.294 - INFO 11240 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+-2021-12-12 20:43:09.319 - INFO 11240 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+-2021-12-12 20:43:09.320 - INFO 11240 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+-2021-12-12 20:43:09.320 - INFO 11240 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+-2021-12-12 20:43:09.320 - INFO 11240 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+-2021-12-12 20:43:09.320 - INFO 11240 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+-2021-12-12 20:43:09.320 - INFO 11240 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+-2021-12-12 20:43:09.320 - INFO 11240 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+-2021-12-12 20:43:09.522 - INFO 11240 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+-2021-12-12 20:43:09.527 - INFO 11240 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+-2021-12-12 20:43:09.534 - INFO 11240 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+-2021-12-12 20:43:09.545 - INFO 11240 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1639321989544 with initial instances count: 2
+-2021-12-12 20:43:09.547 - INFO 11240 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application RESERVATION-SERVICE with eureka with status UP
+-2021-12-12 20:43:09.547 - INFO 11240 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1639321989547, current=UP, previous=STARTING]
+-2021-12-12 20:43:09.549 - INFO 11240 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_RESERVATION-SERVICE/reservation-service:7cf207ce84778d5136705e864848ed55: registering service...
+-2021-12-12 20:43:09.579 - INFO 11240 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_RESERVATION-SERVICE/reservation-service:7cf207ce84778d5136705e864848ed55 - registration status: 204
+-2021-12-12 20:43:09.653 - INFO 11240 --- [main] c.r.l.r.ReservationServiceApplication    : Started ReservationServiceApplication in 4.653 seconds (JVM running for 5.203)
+-2021-12-12 20:43:09.717 - INFO 11240 --- [RMI TCP Connection(3)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+-2021-12-12 20:43:09.718 - INFO 11240 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+-2021-12-12 20:43:09.719 - INFO 11240 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+-2021-12-12 20:43:43.135 - INFO 11240 --- [hystrix-allReservationsThreadPool-1] c.r.l.r.rest.ReservationController       : Entering getAllReservations()
+-2021-12-12 20:43:43.238 -TRACE 11240 --- [hystrix-allReservationsThreadPool-1] c.r.l.r.rest.ReservationController       : Reservation count: 1
+-2021-12-12 20:43:43.239 - INFO 11240 --- [hystrix-allReservationsThreadPool-1] c.r.l.r.rest.ReservationController       : Returning from getAllReservations()
+-2021-12-12 20:43:44.887 - INFO 11240 --- [hystrix-allReservationsThreadPool-2] c.r.l.r.rest.ReservationController       : Entering getAllReservations()
+-2021-12-12 20:43:44.892 -TRACE 11240 --- [hystrix-allReservationsThreadPool-2] c.r.l.r.rest.ReservationController       : Reservation count: 1
+-2021-12-12 20:43:44.892 - INFO 11240 --- [hystrix-allReservationsThreadPool-2] c.r.l.r.rest.ReservationController       : Returning from getAllReservations()
+-2021-12-12 20:43:51.530 - INFO 11240 --- [RMI TCP Connection(10)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+-2021-12-12 20:43:51.531 - INFO 11240 --- [RMI TCP Connection(10)-127.0.0.1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application RESERVATION-SERVICE with eureka with status DOWN
+-2021-12-12 20:43:51.531 - INFO 11240 --- [RMI TCP Connection(10)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1639322031531, current=DOWN, previous=UP]
+-2021-12-12 20:43:51.531 - INFO 11240 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_RESERVATION-SERVICE/reservation-service:7cf207ce84778d5136705e864848ed55: registering service...
+-2021-12-12 20:43:51.535 - INFO 11240 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_RESERVATION-SERVICE/reservation-service:7cf207ce84778d5136705e864848ed55 - registration status: 204
+-2021-12-12 20:43:51.567 - INFO 11240 --- [RMI TCP Connection(10)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+-2021-12-12 20:43:51.569 - INFO 11240 --- [RMI TCP Connection(10)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+-

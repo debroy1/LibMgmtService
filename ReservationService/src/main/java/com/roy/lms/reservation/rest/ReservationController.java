@@ -1,5 +1,7 @@
 package com.roy.lms.reservation.rest;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -22,6 +24,7 @@ import com.roy.lms.reservation.util.AppProperties;
 @RestController
 @RequestMapping("/api/reservations")
 public class ReservationController {
+	private final Logger LOGGER = LoggerFactory.getLogger(ReservationController.class);
 
 	@Autowired
 	private ReservationService reservationService;
@@ -50,8 +53,11 @@ public class ReservationController {
 		})
 	public ReservationResponse getAllReservations() {
 		// TODO - add logic to get user details and book details along with reservation details
+		LOGGER.info("Entering getAllReservations()");
 		ReservationResponse reservationResponse = getRestResponse();
 		reservationResponse.setReservations(reservationService.getAllReservations());
+		LOGGER.trace("Reservation count: " + reservationResponse.getReservations().size());
+		LOGGER.info("Returning from getAllReservations()");
 		return reservationResponse;
 	}
 
