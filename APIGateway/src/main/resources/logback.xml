@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="3600 seconds">
+	<contextName>ApiGateway</contextName>
+ 	<property name="LOGS_PATH" value="C:\\logs\\ApiGateway" />
+ 	<property name="LOGS_NAME" value="ApiGateway" />
+ 
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<!-- encoders are assigned the type ch.qos.logback.classic.encoder.PatternLayoutEncoder by default -->
+		<encoder>
+			<pattern>%contextName %d {HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+		</encoder>
+	</appender>
+
+	<appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${LOGS_PATH}/${LOGS_NAME}.log</file>
+	    <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+	      <!-- daily roll over -->
+	      <fileNamePattern>${LOGS_PATH}/${LOGS_NAME}-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+	      <!-- max size of file, keep max 7 days worth of history which is capped at defined total size -->
+	      <maxFileSize>100KB</maxFileSize>
+	      <maxHistory>7</maxHistory>
+	      <totalSizeCap>10MB</totalSizeCap>
+	    </rollingPolicy>
+		<encoder>
+			<pattern>%contextName %date %level [%thread] %logger{10} [%file:%line] %msg%n</pattern>
+		</encoder>
+	</appender>
+
+	<root level="INFO">
+		<appender-ref ref="STDOUT" />
+		<appender-ref ref="FILE" />
+	</root>
+</configuration>

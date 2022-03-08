@@ -1,5 +1,7 @@
 package com.roy.lms.reservation.rest;
 
+import java.util.Map;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,6 +11,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
@@ -51,9 +54,13 @@ public class ReservationController {
 				@HystrixProperty(name = "coreSize", value = "20"),
 				@HystrixProperty(name = "maxQueueSize", value = "10")
 		})
-	public ReservationResponse getAllReservations() {
+	public ReservationResponse getAllReservations(@RequestHeader Map<String, String> headers) {
 		// TODO - add logic to get user details and book details along with reservation details
 		LOGGER.info("Entering getAllReservations()");
+		System.out.println("Printing headers");// TODO check for specific header
+		headers.forEach((key, value) -> {
+			System.out.println(key + " -> " + value);
+		});
 		ReservationResponse reservationResponse = getRestResponse();
 		reservationResponse.setReservations(reservationService.getAllReservations());
 		LOGGER.trace("Reservation count: " + reservationResponse.getReservations().size());

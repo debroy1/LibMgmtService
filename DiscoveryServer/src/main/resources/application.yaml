@@ -1,11 +1,16 @@
-# Profile to be used
-#spring.profiles.active=cloud
+# app and server related properties
+server:
+  port: 8761
 
-server.port=8761
-spring.application.name=eureka-discovery
-eureka.client.register-with-eureka=false
-eureka.client.fetch-registry=false
+# app related properties
+spring:
+  application:
+    name: eureka-discovery
 
-#eureka.instance.prefer-ip-address=true
-#eureka.instance.hostname=
-#eureka.client.service-url.defaultZone=http://localhost:8761/eureka
+# Properties needed for Eureka
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+  instance:
+    prefer-ip-address: true

@@ -1,0 +1,568 @@
+2022-03-05 01:00:27.420  INFO 58944 --- [main] c.roy.auth.AuthenticationWsApplication   : Starting AuthenticationWsApplication using Java 15.0.2 on HP-VSAQU6E5 with PID 58944 (C:\SpringWorkspace\authentication-ws\target\classes started by Ronav in C:\SpringWorkspace\authentication-ws)
+2022-03-05 01:00:27.426  INFO 58944 --- [main] c.roy.auth.AuthenticationWsApplication   : No active profile set, falling back to 1 default profile: "default"
+2022-03-05 01:00:28.690  INFO 58944 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2022-03-05 01:00:28.851  INFO 58944 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 150 ms. Found 1 MongoDB repository interfaces.
+2022-03-05 01:00:29.087  INFO 58944 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=58698eab-d28f-37db-aa0e-a1170ecab11b
+2022-03-05 01:00:29.396  INFO 58944 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2022-03-05 01:00:29.408  INFO 58944 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-05 01:00:29.409  INFO 58944 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-05 01:00:29.615  INFO 58944 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-05 01:00:29.615  INFO 58944 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2101 ms
+2022-03-05 01:00:30.060  INFO 58944 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[127.0.0.1:27017], srvHost=cluster0.ky4n9.mongodb.net, mode=MULTIPLE, requiredClusterType=REPLICA_SET, serverSelectionTimeout='30000 ms', requiredReplicaSetName='atlas-136lsk-shard-0'}
+2022-03-05 01:00:30.110  INFO 58944 --- [cluster-ClusterId{value='622268d64471e63b633252ed', description='null'}-srv-cluster0.ky4n9.mongodb.net] org.mongodb.driver.cluster               : Adding discovered server cluster0-shard-00-00.ky4n9.mongodb.net:27017 to client view of cluster
+2022-03-05 01:00:30.149  INFO 58944 --- [cluster-ClusterId{value='622268d64471e63b633252ed', description='null'}-srv-cluster0.ky4n9.mongodb.net] org.mongodb.driver.cluster               : Adding discovered server cluster0-shard-00-01.ky4n9.mongodb.net:27017 to client view of cluster
+2022-03-05 01:00:30.150  INFO 58944 --- [cluster-ClusterId{value='622268d64471e63b633252ed', description='null'}-srv-cluster0.ky4n9.mongodb.net] org.mongodb.driver.cluster               : Adding discovered server cluster0-shard-00-02.ky4n9.mongodb.net:27017 to client view of cluster
+2022-03-05 01:00:30.158  WARN 58944 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-03-05 01:00:30.273  WARN 58944 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-03-05 01:00:30.413  INFO 58944 --- [main] c.r.a.e.ServiceExceptionHandler          : Initializing AppExceptionHandler
+2022-03-05 01:00:30.418  INFO 58944 --- [main] com.roy.auth.security.TokenUtil          : Initializing TokenUtil
+2022-03-05 01:00:30.527  INFO 58944 --- [cluster-rtt-ClusterId{value='622268d64471e63b633252ed', description='null'}-cluster0-shard-00-00.ky4n9.mongodb.net:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:6731}] to cluster0-shard-00-00.ky4n9.mongodb.net:27017
+2022-03-05 01:00:30.527  INFO 58944 --- [cluster-rtt-ClusterId{value='622268d64471e63b633252ed', description='null'}-cluster0-shard-00-02.ky4n9.mongodb.net:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:5, serverValue:6015}] to cluster0-shard-00-02.ky4n9.mongodb.net:27017
+2022-03-05 01:00:30.527  INFO 58944 --- [cluster-ClusterId{value='622268d64471e63b633252ed', description='null'}-cluster0-shard-00-02.ky4n9.mongodb.net:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:3, serverValue:6014}] to cluster0-shard-00-02.ky4n9.mongodb.net:27017
+2022-03-05 01:00:30.527  INFO 58944 --- [cluster-ClusterId{value='622268d64471e63b633252ed', description='null'}-cluster0-shard-00-01.ky4n9.mongodb.net:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:6, serverValue:7196}] to cluster0-shard-00-01.ky4n9.mongodb.net:27017
+2022-03-05 01:00:30.527  INFO 58944 --- [cluster-rtt-ClusterId{value='622268d64471e63b633252ed', description='null'}-cluster0-shard-00-01.ky4n9.mongodb.net:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:4, serverValue:7196}] to cluster0-shard-00-01.ky4n9.mongodb.net:27017
+2022-03-05 01:00:30.527  INFO 58944 --- [cluster-ClusterId{value='622268d64471e63b633252ed', description='null'}-cluster0-shard-00-00.ky4n9.mongodb.net:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:6731}] to cluster0-shard-00-00.ky4n9.mongodb.net:27017
+2022-03-05 01:00:30.527  INFO 58944 --- [cluster-ClusterId{value='622268d64471e63b633252ed', description='null'}-cluster0-shard-00-02.ky4n9.mongodb.net:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=cluster0-shard-00-02.ky4n9.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=97046200, setName='atlas-136lsk-shard-0', canonicalAddress=cluster0-shard-00-02.ky4n9.mongodb.net:27017, hosts=[cluster0-shard-00-00.ky4n9.mongodb.net:27017, cluster0-shard-00-01.ky4n9.mongodb.net:27017, cluster0-shard-00-02.ky4n9.mongodb.net:27017], passives=[], arbiters=[], primary='cluster0-shard-00-01.ky4n9.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=7, topologyVersion=TopologyVersion{processId=62222c7f14d66fa1baa30659, counter=3}, lastWriteDate=Sat Mar 05 01:00:31 IST 2022, lastUpdateTimeNanos=1160270525942500}
+2022-03-05 01:00:30.527  INFO 58944 --- [cluster-ClusterId{value='622268d64471e63b633252ed', description='null'}-cluster0-shard-00-01.ky4n9.mongodb.net:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=cluster0-shard-00-01.ky4n9.mongodb.net:27017, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=152925500, setName='atlas-136lsk-shard-0', canonicalAddress=cluster0-shard-00-01.ky4n9.mongodb.net:27017, hosts=[cluster0-shard-00-00.ky4n9.mongodb.net:27017, cluster0-shard-00-01.ky4n9.mongodb.net:27017, cluster0-shard-00-02.ky4n9.mongodb.net:27017], passives=[], arbiters=[], primary='cluster0-shard-00-01.ky4n9.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=7fffffff0000000000000086, setVersion=7, topologyVersion=TopologyVersion{processId=62222b31e6e04aaacdae61c6, counter=6}, lastWriteDate=Sat Mar 05 01:00:31 IST 2022, lastUpdateTimeNanos=1160270525942500}
+2022-03-05 01:00:30.527  INFO 58944 --- [cluster-ClusterId{value='622268d64471e63b633252ed', description='null'}-cluster0-shard-00-00.ky4n9.mongodb.net:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=cluster0-shard-00-00.ky4n9.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=166067900, setName='atlas-136lsk-shard-0', canonicalAddress=cluster0-shard-00-00.ky4n9.mongodb.net:27017, hosts=[cluster0-shard-00-00.ky4n9.mongodb.net:27017, cluster0-shard-00-01.ky4n9.mongodb.net:27017, cluster0-shard-00-02.ky4n9.mongodb.net:27017], passives=[], arbiters=[], primary='cluster0-shard-00-01.ky4n9.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=7, topologyVersion=TopologyVersion{processId=622229efad1193a1184b7aa7, counter=4}, lastWriteDate=Sat Mar 05 01:00:31 IST 2022, lastUpdateTimeNanos=1160270525942600}
+2022-03-05 01:00:30.530  INFO 58944 --- [cluster-ClusterId{value='622268d64471e63b633252ed', description='null'}-cluster0-shard-00-01.ky4n9.mongodb.net:27017] org.mongodb.driver.cluster               : Setting max election id to 7fffffff0000000000000086 from replica set primary cluster0-shard-00-01.ky4n9.mongodb.net:27017
+2022-03-05 01:00:30.530  INFO 58944 --- [cluster-ClusterId{value='622268d64471e63b633252ed', description='null'}-cluster0-shard-00-01.ky4n9.mongodb.net:27017] org.mongodb.driver.cluster               : Setting max set version to 7 from replica set primary cluster0-shard-00-01.ky4n9.mongodb.net:27017
+2022-03-05 01:00:30.530  INFO 58944 --- [cluster-ClusterId{value='622268d64471e63b633252ed', description='null'}-cluster0-shard-00-01.ky4n9.mongodb.net:27017] org.mongodb.driver.cluster               : Discovered replica set primary cluster0-shard-00-01.ky4n9.mongodb.net:27017
+2022-03-05 01:00:30.537  INFO 58944 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 1fb36b01-7397-4215-b0b9-59de35b5aae7
+
+2022-03-05 01:00:30.618  INFO 58944 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
+2022-03-05 01:00:31.192  INFO 58944 --- [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2022-03-05 01:00:31.251  WARN 58944 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2022-03-05 01:00:31.255  INFO 58944 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-03-05 01:00:31.321  INFO 58944 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 64816 (http) with context path ''
+2022-03-05 01:00:31.321  INFO 58944 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 64816
+2022-03-05 01:00:31.333  INFO 58944 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2022-03-05 01:00:31.384  INFO 58944 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2022-03-05 01:00:31.391  INFO 58944 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-03-05 01:00:31.420  INFO 58944 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2022-03-05 01:00:31.420  INFO 58944 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2022-03-05 01:00:31.421  INFO 58944 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2022-03-05 01:00:31.421  INFO 58944 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2022-03-05 01:00:31.421  INFO 58944 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2022-03-05 01:00:31.421  INFO 58944 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2022-03-05 01:00:31.421  INFO 58944 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2022-03-05 01:00:31.747  INFO 58944 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-03-05 01:00:31.753  INFO 58944 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2022-03-05 01:00:31.761  INFO 58944 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2022-03-05 01:00:31.778  INFO 58944 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1646422231776 with initial instances count: 0
+2022-03-05 01:00:31.779  INFO 58944 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application AUTH-SERVICE with eureka with status UP
+2022-03-05 01:00:31.779  INFO 58944 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1646422231779, current=UP, previous=STARTING]
+2022-03-05 01:00:31.781  INFO 58944 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_AUTH-SERVICE/auth-service:9d34e6b2c1f03500717c2130e3763c46: registering service...
+2022-03-05 01:00:31.892  INFO 58944 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_AUTH-SERVICE/auth-service:9d34e6b2c1f03500717c2130e3763c46 - registration status: 204
+2022-03-05 01:00:31.895  INFO 58944 --- [main] c.roy.auth.AuthenticationWsApplication   : Started AuthenticationWsApplication in 5.303 seconds (JVM running for 6.128)
+2022-03-05 01:00:32.022  INFO 58944 --- [RMI TCP Connection(3)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-05 01:00:32.022  INFO 58944 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-03-05 01:00:32.024  INFO 58944 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2022-03-05 01:01:01.761  INFO 58944 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2022-03-05 01:01:01.761  INFO 58944 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2022-03-05 01:01:01.761  INFO 58944 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2022-03-05 01:01:01.761  INFO 58944 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2022-03-05 01:01:01.761  INFO 58944 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2022-03-05 01:01:01.761  INFO 58944 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2022-03-05 01:01:01.762  INFO 58944 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2022-03-05 01:01:01.774  INFO 58944 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-03-05 01:01:22.441  INFO 58944 --- [http-nio-auto-1-exec-1] c.r.auth.rest.AuthenticationController   : received request to create user
+2022-03-05 01:01:22.443  INFO 58944 --- [http-nio-auto-1-exec-1] com.roy.auth.atlas.AtlasService          : retrieving user with email: ronavroy@gmail.com
+2022-03-05 01:01:22.773  INFO 58944 --- [http-nio-auto-1-exec-1] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:7, serverValue:7125}] to cluster0-shard-00-01.ky4n9.mongodb.net:27017
+2022-03-05 01:01:23.072  INFO 58944 --- [http-nio-auto-1-exec-1] com.roy.auth.atlas.AtlasService          : saving user
+2022-03-05 01:01:23.229  INFO 58944 --- [http-nio-auto-1-exec-1] c.r.auth.rest.AuthenticationController   : able to save user with id: 6222690b4471e63b633252ee
+2022-03-05 01:01:23.241  INFO 58944 --- [http-nio-auto-1-exec-1] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 01:01:30.793  INFO 58944 --- [http-nio-auto-1-exec-2] c.r.auth.rest.AuthenticationController   : received request to create user
+2022-03-05 01:01:30.794  INFO 58944 --- [http-nio-auto-1-exec-2] com.roy.auth.atlas.AtlasService          : retrieving user with email: ronavroy@gmail.com
+2022-03-05 01:01:30.827 ERROR 58944 --- [http-nio-auto-1-exec-2] c.r.auth.rest.AuthenticationController   : existing user found
+2022-03-05 01:01:37.578  INFO 58944 --- [http-nio-auto-1-exec-5] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 01:01:37.842  INFO 58944 --- [http-nio-auto-1-exec-5] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 01:01:37.844  INFO 58944 --- [http-nio-auto-1-exec-5] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 01:04:05.744  INFO 58944 --- [RMI TCP Connection(13)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2022-03-05 01:04:05.746  INFO 58944 --- [RMI TCP Connection(13)-127.0.0.1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application AUTH-SERVICE with eureka with status DOWN
+2022-03-05 01:04:05.747  INFO 58944 --- [RMI TCP Connection(13)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1646422445746, current=DOWN, previous=UP]
+2022-03-05 01:04:05.747  INFO 58944 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_AUTH-SERVICE/auth-service:9d34e6b2c1f03500717c2130e3763c46: registering service...
+2022-03-05 01:04:05.753  INFO 58944 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_AUTH-SERVICE/auth-service:9d34e6b2c1f03500717c2130e3763c46 - registration status: 204
+2022-03-05 01:04:05.827  INFO 58944 --- [RMI TCP Connection(13)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2022-03-05 01:04:08.857  INFO 58944 --- [RMI TCP Connection(13)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2022-03-05 01:04:08.865  INFO 58944 --- [RMI TCP Connection(13)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_AUTH-SERVICE/auth-service:9d34e6b2c1f03500717c2130e3763c46 - deregister  status: 200
+2022-03-05 01:04:08.992  INFO 58944 --- [RMI TCP Connection(13)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2022-03-05 15:54:49.397  INFO 64164 --- [main] c.roy.auth.AuthenticationWsApplication   : Starting AuthenticationWsApplication using Java 15.0.2 on HP-VSAQU6E5 with PID 64164 (C:\SpringWorkspace\authentication-ws\target\classes started by Ronav in C:\SpringWorkspace\authentication-ws)
+2022-03-05 15:54:49.401  INFO 64164 --- [main] c.roy.auth.AuthenticationWsApplication   : No active profile set, falling back to 1 default profile: "default"
+2022-03-05 15:54:50.276  INFO 64164 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2022-03-05 15:54:50.457  INFO 64164 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 175 ms. Found 1 MongoDB repository interfaces.
+2022-03-05 15:54:50.674  INFO 64164 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=58698eab-d28f-37db-aa0e-a1170ecab11b
+2022-03-05 15:54:50.938  INFO 64164 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2022-03-05 15:54:50.950  INFO 64164 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-05 15:54:50.950  INFO 64164 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-05 15:54:51.066  INFO 64164 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-05 15:54:51.067  INFO 64164 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1628 ms
+2022-03-05 15:54:51.415  INFO 64164 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[127.0.0.1:27017], srvHost=cluster0.ky4n9.mongodb.net, mode=MULTIPLE, requiredClusterType=REPLICA_SET, serverSelectionTimeout='30000 ms', requiredReplicaSetName='atlas-136lsk-shard-0'}
+2022-03-05 15:54:51.474  INFO 64164 --- [cluster-ClusterId{value='62233a73f88f026c0f6554b5', description='null'}-srv-cluster0.ky4n9.mongodb.net] org.mongodb.driver.cluster               : Adding discovered server cluster0-shard-00-00.ky4n9.mongodb.net:27017 to client view of cluster
+2022-03-05 15:54:51.511  INFO 64164 --- [cluster-ClusterId{value='62233a73f88f026c0f6554b5', description='null'}-srv-cluster0.ky4n9.mongodb.net] org.mongodb.driver.cluster               : Adding discovered server cluster0-shard-00-01.ky4n9.mongodb.net:27017 to client view of cluster
+2022-03-05 15:54:51.512  INFO 64164 --- [cluster-ClusterId{value='62233a73f88f026c0f6554b5', description='null'}-srv-cluster0.ky4n9.mongodb.net] org.mongodb.driver.cluster               : Adding discovered server cluster0-shard-00-02.ky4n9.mongodb.net:27017 to client view of cluster
+2022-03-05 15:54:51.552  WARN 64164 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-03-05 15:54:51.669  WARN 64164 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-03-05 15:54:51.792  INFO 64164 --- [main] c.r.a.e.ServiceExceptionHandler          : Initializing AppExceptionHandler
+2022-03-05 15:54:51.798  INFO 64164 --- [main] com.roy.auth.security.TokenUtil          : Initializing TokenUtil
+2022-03-05 15:54:51.911  INFO 64164 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: d5b0eca6-a681-46d2-98c2-fa72847c24c6
+
+2022-03-05 15:54:51.953  INFO 64164 --- [cluster-ClusterId{value='62233a73f88f026c0f6554b5', description='null'}-cluster0-shard-00-02.ky4n9.mongodb.net:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:31510}] to cluster0-shard-00-02.ky4n9.mongodb.net:27017
+2022-03-05 15:54:51.953  INFO 64164 --- [cluster-rtt-ClusterId{value='62233a73f88f026c0f6554b5', description='null'}-cluster0-shard-00-00.ky4n9.mongodb.net:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:32875}] to cluster0-shard-00-00.ky4n9.mongodb.net:27017
+2022-03-05 15:54:51.953  INFO 64164 --- [cluster-rtt-ClusterId{value='62233a73f88f026c0f6554b5', description='null'}-cluster0-shard-00-01.ky4n9.mongodb.net:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:4, serverValue:34850}] to cluster0-shard-00-01.ky4n9.mongodb.net:27017
+2022-03-05 15:54:51.953  INFO 64164 --- [cluster-rtt-ClusterId{value='62233a73f88f026c0f6554b5', description='null'}-cluster0-shard-00-02.ky4n9.mongodb.net:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:3, serverValue:31510}] to cluster0-shard-00-02.ky4n9.mongodb.net:27017
+2022-03-05 15:54:51.954  INFO 64164 --- [cluster-ClusterId{value='62233a73f88f026c0f6554b5', description='null'}-cluster0-shard-00-02.ky4n9.mongodb.net:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=cluster0-shard-00-02.ky4n9.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=162647600, setName='atlas-136lsk-shard-0', canonicalAddress=cluster0-shard-00-02.ky4n9.mongodb.net:27017, hosts=[cluster0-shard-00-00.ky4n9.mongodb.net:27017, cluster0-shard-00-01.ky4n9.mongodb.net:27017, cluster0-shard-00-02.ky4n9.mongodb.net:27017], passives=[], arbiters=[], primary='cluster0-shard-00-01.ky4n9.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=7, topologyVersion=TopologyVersion{processId=62222c7f14d66fa1baa30659, counter=3}, lastWriteDate=Sat Mar 05 15:54:52 IST 2022, lastUpdateTimeNanos=1213933008494900}
+2022-03-05 15:54:51.965  INFO 64164 --- [cluster-ClusterId{value='62233a73f88f026c0f6554b5', description='null'}-cluster0-shard-00-01.ky4n9.mongodb.net:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:5, serverValue:34850}] to cluster0-shard-00-01.ky4n9.mongodb.net:27017
+2022-03-05 15:54:51.966  INFO 64164 --- [cluster-ClusterId{value='62233a73f88f026c0f6554b5', description='null'}-cluster0-shard-00-01.ky4n9.mongodb.net:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=cluster0-shard-00-01.ky4n9.mongodb.net:27017, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=143124000, setName='atlas-136lsk-shard-0', canonicalAddress=cluster0-shard-00-01.ky4n9.mongodb.net:27017, hosts=[cluster0-shard-00-00.ky4n9.mongodb.net:27017, cluster0-shard-00-01.ky4n9.mongodb.net:27017, cluster0-shard-00-02.ky4n9.mongodb.net:27017], passives=[], arbiters=[], primary='cluster0-shard-00-01.ky4n9.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=7fffffff0000000000000086, setVersion=7, topologyVersion=TopologyVersion{processId=62222b31e6e04aaacdae61c6, counter=6}, lastWriteDate=Sat Mar 05 15:54:52 IST 2022, lastUpdateTimeNanos=1213933022273700}
+2022-03-05 15:54:51.966  INFO 64164 --- [cluster-ClusterId{value='62233a73f88f026c0f6554b5', description='null'}-cluster0-shard-00-01.ky4n9.mongodb.net:27017] org.mongodb.driver.cluster               : Setting max election id to 7fffffff0000000000000086 from replica set primary cluster0-shard-00-01.ky4n9.mongodb.net:27017
+2022-03-05 15:54:51.966  INFO 64164 --- [cluster-ClusterId{value='62233a73f88f026c0f6554b5', description='null'}-cluster0-shard-00-01.ky4n9.mongodb.net:27017] org.mongodb.driver.cluster               : Setting max set version to 7 from replica set primary cluster0-shard-00-01.ky4n9.mongodb.net:27017
+2022-03-05 15:54:51.967  INFO 64164 --- [cluster-ClusterId{value='62233a73f88f026c0f6554b5', description='null'}-cluster0-shard-00-01.ky4n9.mongodb.net:27017] org.mongodb.driver.cluster               : Discovered replica set primary cluster0-shard-00-01.ky4n9.mongodb.net:27017
+2022-03-05 15:54:51.969  INFO 64164 --- [cluster-ClusterId{value='62233a73f88f026c0f6554b5', description='null'}-cluster0-shard-00-00.ky4n9.mongodb.net:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:6, serverValue:32875}] to cluster0-shard-00-00.ky4n9.mongodb.net:27017
+2022-03-05 15:54:51.969  INFO 64164 --- [cluster-ClusterId{value='62233a73f88f026c0f6554b5', description='null'}-cluster0-shard-00-00.ky4n9.mongodb.net:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=cluster0-shard-00-00.ky4n9.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=146283500, setName='atlas-136lsk-shard-0', canonicalAddress=cluster0-shard-00-00.ky4n9.mongodb.net:27017, hosts=[cluster0-shard-00-00.ky4n9.mongodb.net:27017, cluster0-shard-00-01.ky4n9.mongodb.net:27017, cluster0-shard-00-02.ky4n9.mongodb.net:27017], passives=[], arbiters=[], primary='cluster0-shard-00-01.ky4n9.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=7, topologyVersion=TopologyVersion{processId=622229efad1193a1184b7aa7, counter=4}, lastWriteDate=Sat Mar 05 15:54:52 IST 2022, lastUpdateTimeNanos=1213933025432400}
+2022-03-05 15:54:51.992  INFO 64164 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
+2022-03-05 15:54:52.576  INFO 64164 --- [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2022-03-05 15:54:52.628  WARN 64164 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2022-03-05 15:54:52.631  INFO 64164 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-03-05 15:54:52.691  INFO 64164 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 62003 (http) with context path ''
+2022-03-05 15:54:52.692  INFO 64164 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 62003
+2022-03-05 15:54:52.701  INFO 64164 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2022-03-05 15:54:52.755  INFO 64164 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2022-03-05 15:54:52.762  INFO 64164 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-03-05 15:54:52.788  INFO 64164 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2022-03-05 15:54:52.788  INFO 64164 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2022-03-05 15:54:52.788  INFO 64164 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2022-03-05 15:54:52.788  INFO 64164 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2022-03-05 15:54:52.788  INFO 64164 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2022-03-05 15:54:52.788  INFO 64164 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2022-03-05 15:54:52.788  INFO 64164 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2022-03-05 15:54:52.993  INFO 64164 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-03-05 15:54:53.000  INFO 64164 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2022-03-05 15:54:53.008  INFO 64164 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2022-03-05 15:54:53.022  INFO 64164 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1646475893021 with initial instances count: 1
+2022-03-05 15:54:53.024  INFO 64164 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application AUTH-SERVICE with eureka with status UP
+2022-03-05 15:54:53.024  INFO 64164 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1646475893024, current=UP, previous=STARTING]
+2022-03-05 15:54:53.025  INFO 64164 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_AUTH-SERVICE/auth-service:94f301f638a873daaaec166b8446f988: registering service...
+2022-03-05 15:54:53.069  INFO 64164 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_AUTH-SERVICE/auth-service:94f301f638a873daaaec166b8446f988 - registration status: 204
+2022-03-05 15:54:53.114  INFO 64164 --- [main] c.roy.auth.AuthenticationWsApplication   : Started AuthenticationWsApplication in 4.191 seconds (JVM running for 4.861)
+2022-03-05 15:54:53.843  INFO 64164 --- [RMI TCP Connection(1)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-05 15:54:53.843  INFO 64164 --- [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-03-05 15:54:53.844  INFO 64164 --- [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-03-05 15:55:12.888  INFO 64164 --- [http-nio-auto-1-exec-1] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 15:55:13.284  INFO 64164 --- [http-nio-auto-1-exec-1] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:7, serverValue:34450}] to cluster0-shard-00-01.ky4n9.mongodb.net:27017
+2022-03-05 15:55:13.481  INFO 64164 --- [http-nio-auto-1-exec-1] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 15:55:13.485  INFO 64164 --- [http-nio-auto-1-exec-1] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 15:57:03.664  INFO 64164 --- [http-nio-auto-1-exec-3] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 15:57:03.817  INFO 64164 --- [http-nio-auto-1-exec-3] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 15:57:03.817  INFO 64164 --- [http-nio-auto-1-exec-3] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 15:57:04.544  INFO 64164 --- [http-nio-auto-1-exec-4] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 15:57:04.691  INFO 64164 --- [http-nio-auto-1-exec-4] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 15:57:04.691  INFO 64164 --- [http-nio-auto-1-exec-4] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 15:57:05.415  INFO 64164 --- [http-nio-auto-1-exec-5] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 15:57:05.595  INFO 64164 --- [http-nio-auto-1-exec-5] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 15:57:05.597  INFO 64164 --- [http-nio-auto-1-exec-5] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 15:57:06.220  INFO 64164 --- [http-nio-auto-1-exec-6] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 15:57:06.379  INFO 64164 --- [http-nio-auto-1-exec-6] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 15:57:06.380  INFO 64164 --- [http-nio-auto-1-exec-6] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 15:57:06.960  INFO 64164 --- [http-nio-auto-1-exec-7] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 15:57:07.103  INFO 64164 --- [http-nio-auto-1-exec-7] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 15:57:07.104  INFO 64164 --- [http-nio-auto-1-exec-7] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 15:57:09.374  INFO 64164 --- [http-nio-auto-1-exec-8] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 15:57:09.533  INFO 64164 --- [http-nio-auto-1-exec-8] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 15:57:09.534  INFO 64164 --- [http-nio-auto-1-exec-8] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 15:57:10.139  INFO 64164 --- [http-nio-auto-1-exec-10] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 15:57:10.283  INFO 64164 --- [http-nio-auto-1-exec-10] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 15:57:10.284  INFO 64164 --- [http-nio-auto-1-exec-10] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 15:57:10.811  INFO 64164 --- [http-nio-auto-1-exec-9] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 15:57:10.954  INFO 64164 --- [http-nio-auto-1-exec-9] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 15:57:10.954  INFO 64164 --- [http-nio-auto-1-exec-9] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 15:57:11.520  INFO 64164 --- [http-nio-auto-1-exec-1] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 15:57:11.667  INFO 64164 --- [http-nio-auto-1-exec-1] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 15:57:11.669  INFO 64164 --- [http-nio-auto-1-exec-1] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 15:57:12.240  INFO 64164 --- [http-nio-auto-1-exec-2] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 15:57:12.412  INFO 64164 --- [http-nio-auto-1-exec-2] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 15:57:12.412  INFO 64164 --- [http-nio-auto-1-exec-2] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 15:57:13.092  INFO 64164 --- [http-nio-auto-1-exec-3] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 15:57:13.228  INFO 64164 --- [http-nio-auto-1-exec-3] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 15:57:13.228  INFO 64164 --- [http-nio-auto-1-exec-3] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 15:57:13.839  INFO 64164 --- [http-nio-auto-1-exec-4] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 15:57:13.986  INFO 64164 --- [http-nio-auto-1-exec-4] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 15:57:13.986  INFO 64164 --- [http-nio-auto-1-exec-4] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 15:57:14.540  INFO 64164 --- [http-nio-auto-1-exec-5] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 15:57:14.681  INFO 64164 --- [http-nio-auto-1-exec-5] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 15:57:14.681  INFO 64164 --- [http-nio-auto-1-exec-5] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 15:57:15.190  INFO 64164 --- [http-nio-auto-1-exec-6] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 15:57:15.344  INFO 64164 --- [http-nio-auto-1-exec-6] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 15:57:15.344  INFO 64164 --- [http-nio-auto-1-exec-6] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 15:57:15.878  INFO 64164 --- [http-nio-auto-1-exec-7] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 15:57:16.019  INFO 64164 --- [http-nio-auto-1-exec-7] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 15:57:16.020  INFO 64164 --- [http-nio-auto-1-exec-7] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 15:58:03.454  INFO 64164 --- [http-nio-auto-1-exec-8] com.roy.auth.security.TokenUtil          : Validating JWT token inside validateToken() of com.roy.auth.security
+2022-03-05 15:58:03.456  INFO 64164 --- [http-nio-auto-1-exec-8] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 15:58:03.512  INFO 64164 --- [http-nio-auto-1-exec-8] c.r.auth.rest.AuthenticationController   : token is authenticated
+2022-03-05 15:58:08.794  WARN 64164 --- [http-nio-auto-1-exec-10] c.r.auth.rest.AuthenticationController   : invalid token - error in validating token -> JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2022-03-05 15:58:08.794  INFO 64164 --- [http-nio-auto-1-exec-10] c.r.auth.rest.AuthenticationController   : token is not able to be authenticated
+2022-03-05 15:58:09.936  WARN 64164 --- [http-nio-auto-1-exec-9] c.r.auth.rest.AuthenticationController   : invalid token - error in validating token -> JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2022-03-05 15:58:09.937  INFO 64164 --- [http-nio-auto-1-exec-9] c.r.auth.rest.AuthenticationController   : token is not able to be authenticated
+2022-03-05 15:58:10.740  WARN 64164 --- [http-nio-auto-1-exec-1] c.r.auth.rest.AuthenticationController   : invalid token - error in validating token -> JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2022-03-05 15:58:10.741  INFO 64164 --- [http-nio-auto-1-exec-1] c.r.auth.rest.AuthenticationController   : token is not able to be authenticated
+2022-03-05 15:58:12.067  WARN 64164 --- [http-nio-auto-1-exec-2] c.r.auth.rest.AuthenticationController   : invalid token - error in validating token -> JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2022-03-05 15:58:12.067  INFO 64164 --- [http-nio-auto-1-exec-2] c.r.auth.rest.AuthenticationController   : token is not able to be authenticated
+2022-03-05 15:58:12.759  WARN 64164 --- [http-nio-auto-1-exec-3] c.r.auth.rest.AuthenticationController   : invalid token - error in validating token -> JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2022-03-05 15:58:12.759  INFO 64164 --- [http-nio-auto-1-exec-3] c.r.auth.rest.AuthenticationController   : token is not able to be authenticated
+2022-03-05 15:58:13.579  WARN 64164 --- [http-nio-auto-1-exec-4] c.r.auth.rest.AuthenticationController   : invalid token - error in validating token -> JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2022-03-05 15:58:13.579  INFO 64164 --- [http-nio-auto-1-exec-4] c.r.auth.rest.AuthenticationController   : token is not able to be authenticated
+2022-03-05 15:58:14.115  WARN 64164 --- [http-nio-auto-1-exec-5] c.r.auth.rest.AuthenticationController   : invalid token - error in validating token -> JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2022-03-05 15:58:14.116  INFO 64164 --- [http-nio-auto-1-exec-5] c.r.auth.rest.AuthenticationController   : token is not able to be authenticated
+2022-03-05 15:58:14.764  WARN 64164 --- [http-nio-auto-1-exec-6] c.r.auth.rest.AuthenticationController   : invalid token - error in validating token -> JWT signature does not match locally computed signature. JWT validity cannot be asserted and should not be trusted.
+2022-03-05 15:58:14.765  INFO 64164 --- [http-nio-auto-1-exec-6] c.r.auth.rest.AuthenticationController   : token is not able to be authenticated
+2022-03-05 15:59:52.793  INFO 64164 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-03-05 16:00:33.119  INFO 64164 --- [http-nio-auto-1-exec-8] c.r.auth.rest.AuthenticationController   : received request to create user
+2022-03-05 16:00:33.120  INFO 64164 --- [http-nio-auto-1-exec-8] com.roy.auth.atlas.AtlasService          : retrieving user with email: ronavroy@gmail.com
+2022-03-05 16:00:33.174 ERROR 64164 --- [http-nio-auto-1-exec-8] c.r.auth.rest.AuthenticationController   : existing user found
+2022-03-05 16:00:35.656  INFO 64164 --- [http-nio-auto-1-exec-10] c.r.auth.rest.AuthenticationController   : received request to create user
+2022-03-05 16:00:35.657  INFO 64164 --- [http-nio-auto-1-exec-10] com.roy.auth.atlas.AtlasService          : retrieving user with email: ronavroy@gmail.com
+2022-03-05 16:00:35.712 ERROR 64164 --- [http-nio-auto-1-exec-10] c.r.auth.rest.AuthenticationController   : existing user found
+2022-03-05 16:00:36.487  INFO 64164 --- [http-nio-auto-1-exec-9] c.r.auth.rest.AuthenticationController   : received request to create user
+2022-03-05 16:00:36.487  INFO 64164 --- [http-nio-auto-1-exec-9] com.roy.auth.atlas.AtlasService          : retrieving user with email: ronavroy@gmail.com
+2022-03-05 16:00:36.542 ERROR 64164 --- [http-nio-auto-1-exec-9] c.r.auth.rest.AuthenticationController   : existing user found
+2022-03-05 16:00:46.169  INFO 64164 --- [http-nio-auto-1-exec-1] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 16:00:46.311  INFO 64164 --- [http-nio-auto-1-exec-1] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 16:00:46.311  INFO 64164 --- [http-nio-auto-1-exec-1] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 16:00:46.973  INFO 64164 --- [http-nio-auto-1-exec-2] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 16:00:47.116  INFO 64164 --- [http-nio-auto-1-exec-2] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 16:00:47.117  INFO 64164 --- [http-nio-auto-1-exec-2] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 16:00:47.811  INFO 64164 --- [http-nio-auto-1-exec-3] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 16:00:47.961  INFO 64164 --- [http-nio-auto-1-exec-3] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 16:00:47.961  INFO 64164 --- [http-nio-auto-1-exec-3] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 16:00:48.492  INFO 64164 --- [http-nio-auto-1-exec-4] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 16:00:48.631  INFO 64164 --- [http-nio-auto-1-exec-4] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 16:00:48.632  INFO 64164 --- [http-nio-auto-1-exec-4] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 16:00:49.278  INFO 64164 --- [http-nio-auto-1-exec-5] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 16:00:49.422  INFO 64164 --- [http-nio-auto-1-exec-5] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 16:00:49.423  INFO 64164 --- [http-nio-auto-1-exec-5] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 16:00:49.932  INFO 64164 --- [http-nio-auto-1-exec-6] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 16:00:50.077  INFO 64164 --- [http-nio-auto-1-exec-6] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 16:00:50.078  INFO 64164 --- [http-nio-auto-1-exec-6] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 16:00:50.687  INFO 64164 --- [http-nio-auto-1-exec-7] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 16:00:50.850  INFO 64164 --- [http-nio-auto-1-exec-7] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 16:00:50.851  INFO 64164 --- [http-nio-auto-1-exec-7] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 16:00:51.319  INFO 64164 --- [http-nio-auto-1-exec-8] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 16:00:51.459  INFO 64164 --- [http-nio-auto-1-exec-8] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 16:00:51.459  INFO 64164 --- [http-nio-auto-1-exec-8] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 16:00:52.060  INFO 64164 --- [http-nio-auto-1-exec-10] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 16:00:52.233  INFO 64164 --- [http-nio-auto-1-exec-10] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 16:00:52.233  INFO 64164 --- [http-nio-auto-1-exec-10] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 16:00:52.766  INFO 64164 --- [http-nio-auto-1-exec-9] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 16:00:52.913  INFO 64164 --- [http-nio-auto-1-exec-9] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 16:00:52.913  INFO 64164 --- [http-nio-auto-1-exec-9] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 16:00:53.439  INFO 64164 --- [http-nio-auto-1-exec-1] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 16:00:53.589  INFO 64164 --- [http-nio-auto-1-exec-1] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 16:00:53.590  INFO 64164 --- [http-nio-auto-1-exec-1] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 16:00:54.150  INFO 64164 --- [http-nio-auto-1-exec-2] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 16:00:54.305  INFO 64164 --- [http-nio-auto-1-exec-2] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 16:00:54.305  INFO 64164 --- [http-nio-auto-1-exec-2] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 16:00:54.821  INFO 64164 --- [http-nio-auto-1-exec-3] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 16:00:54.964  INFO 64164 --- [http-nio-auto-1-exec-3] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 16:00:54.964  INFO 64164 --- [http-nio-auto-1-exec-3] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 16:00:55.319  INFO 64164 --- [http-nio-auto-1-exec-4] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 16:00:55.477  INFO 64164 --- [http-nio-auto-1-exec-4] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 16:00:55.477  INFO 64164 --- [http-nio-auto-1-exec-4] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 16:00:55.925  INFO 64164 --- [http-nio-auto-1-exec-5] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 16:00:56.075  INFO 64164 --- [http-nio-auto-1-exec-5] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 16:00:56.076  INFO 64164 --- [http-nio-auto-1-exec-5] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 16:01:54.086  INFO 64164 --- [http-nio-auto-1-exec-6] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 16:01:54.223  INFO 64164 --- [http-nio-auto-1-exec-6] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 16:01:54.224  INFO 64164 --- [http-nio-auto-1-exec-6] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 16:01:54.894  INFO 64164 --- [http-nio-auto-1-exec-7] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 16:01:55.054  INFO 64164 --- [http-nio-auto-1-exec-7] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 16:01:55.055  INFO 64164 --- [http-nio-auto-1-exec-7] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 16:01:55.575  INFO 64164 --- [http-nio-auto-1-exec-8] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 16:01:55.735  INFO 64164 --- [http-nio-auto-1-exec-8] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 16:01:55.735  INFO 64164 --- [http-nio-auto-1-exec-8] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 16:01:56.295  INFO 64164 --- [http-nio-auto-1-exec-10] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 16:01:56.455  INFO 64164 --- [http-nio-auto-1-exec-10] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 16:01:56.456  INFO 64164 --- [http-nio-auto-1-exec-10] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 16:01:57.039  INFO 64164 --- [http-nio-auto-1-exec-9] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 16:01:57.179  INFO 64164 --- [http-nio-auto-1-exec-9] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 16:01:57.179  INFO 64164 --- [http-nio-auto-1-exec-9] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 16:01:57.748  INFO 64164 --- [http-nio-auto-1-exec-1] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 16:01:57.898  INFO 64164 --- [http-nio-auto-1-exec-1] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 16:01:57.900  INFO 64164 --- [http-nio-auto-1-exec-1] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 16:01:58.507  INFO 64164 --- [http-nio-auto-1-exec-2] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 16:01:58.652  INFO 64164 --- [http-nio-auto-1-exec-2] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 16:01:58.652  INFO 64164 --- [http-nio-auto-1-exec-2] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 16:01:59.183  INFO 64164 --- [http-nio-auto-1-exec-3] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 16:01:59.326  INFO 64164 --- [http-nio-auto-1-exec-3] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 16:01:59.326  INFO 64164 --- [http-nio-auto-1-exec-3] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 16:01:59.878  INFO 64164 --- [http-nio-auto-1-exec-4] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 16:02:00.019  INFO 64164 --- [http-nio-auto-1-exec-4] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 16:02:00.020  INFO 64164 --- [http-nio-auto-1-exec-4] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 16:02:00.620  INFO 64164 --- [http-nio-auto-1-exec-5] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 16:02:00.787  INFO 64164 --- [http-nio-auto-1-exec-5] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 16:02:00.787  INFO 64164 --- [http-nio-auto-1-exec-5] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 16:02:31.263  INFO 64164 --- [RMI TCP Connection(19)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2022-03-05 16:02:31.264  INFO 64164 --- [RMI TCP Connection(19)-127.0.0.1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application AUTH-SERVICE with eureka with status DOWN
+2022-03-05 16:02:31.264  INFO 64164 --- [RMI TCP Connection(19)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1646476351264, current=DOWN, previous=UP]
+2022-03-05 16:02:31.264  INFO 64164 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_AUTH-SERVICE/auth-service:94f301f638a873daaaec166b8446f988: registering service...
+2022-03-05 16:02:31.281  INFO 64164 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_AUTH-SERVICE/auth-service:94f301f638a873daaaec166b8446f988 - registration status: 204
+2022-03-05 16:02:31.425  INFO 64164 --- [RMI TCP Connection(19)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2022-03-05 16:02:34.446  INFO 64164 --- [RMI TCP Connection(19)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2022-03-05 16:02:34.468  INFO 64164 --- [RMI TCP Connection(19)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_AUTH-SERVICE/auth-service:94f301f638a873daaaec166b8446f988 - deregister  status: 200
+2022-03-05 16:02:34.548  INFO 64164 --- [RMI TCP Connection(19)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2022-03-05 16:12:20.230  INFO 72340 --- [main] c.roy.auth.AuthenticationWsApplication   : Starting AuthenticationWsApplication using Java 15.0.2 on HP-VSAQU6E5 with PID 72340 (C:\SpringWorkspace\authentication-ws\target\classes started by Ronav in C:\SpringWorkspace\authentication-ws)
+2022-03-05 16:12:20.233  INFO 72340 --- [main] c.roy.auth.AuthenticationWsApplication   : No active profile set, falling back to 1 default profile: "default"
+2022-03-05 16:12:20.909  INFO 72340 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2022-03-05 16:12:21.029  INFO 72340 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 116 ms. Found 1 MongoDB repository interfaces.
+2022-03-05 16:12:21.203  INFO 72340 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=58698eab-d28f-37db-aa0e-a1170ecab11b
+2022-03-05 16:12:21.439  INFO 72340 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2022-03-05 16:12:21.449  INFO 72340 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-05 16:12:21.450  INFO 72340 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-05 16:12:21.575  INFO 72340 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-05 16:12:21.575  INFO 72340 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1312 ms
+2022-03-05 16:12:21.909  INFO 72340 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[127.0.0.1:27017], srvHost=cluster0.ky4n9.mongodb.net, mode=MULTIPLE, requiredClusterType=REPLICA_SET, serverSelectionTimeout='30000 ms', requiredReplicaSetName='atlas-136lsk-shard-0'}
+2022-03-05 16:12:22.005  INFO 72340 --- [cluster-ClusterId{value='62233e8d657045531c14fac1', description='null'}-srv-cluster0.ky4n9.mongodb.net] org.mongodb.driver.cluster               : Adding discovered server cluster0-shard-00-00.ky4n9.mongodb.net:27017 to client view of cluster
+2022-03-05 16:12:22.021  WARN 72340 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-03-05 16:12:22.051  INFO 72340 --- [cluster-ClusterId{value='62233e8d657045531c14fac1', description='null'}-srv-cluster0.ky4n9.mongodb.net] org.mongodb.driver.cluster               : Adding discovered server cluster0-shard-00-01.ky4n9.mongodb.net:27017 to client view of cluster
+2022-03-05 16:12:22.052  INFO 72340 --- [cluster-ClusterId{value='62233e8d657045531c14fac1', description='null'}-srv-cluster0.ky4n9.mongodb.net] org.mongodb.driver.cluster               : Adding discovered server cluster0-shard-00-02.ky4n9.mongodb.net:27017 to client view of cluster
+2022-03-05 16:12:22.149  WARN 72340 --- [main] o.s.data.convert.CustomConversions       : Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-03-05 16:12:22.250  INFO 72340 --- [main] c.r.a.e.ServiceExceptionHandler          : Initializing AppExceptionHandler
+2022-03-05 16:12:22.254  INFO 72340 --- [main] com.roy.auth.security.TokenUtil          : Initializing TokenUtil
+2022-03-05 16:12:22.334  INFO 72340 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 8dd94651-e816-433e-bab5-db3a57d7c06d
+
+2022-03-05 16:12:22.412  INFO 72340 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
+2022-03-05 16:12:22.489  INFO 72340 --- [cluster-rtt-ClusterId{value='62233e8d657045531c14fac1', description='null'}-cluster0-shard-00-01.ky4n9.mongodb.net:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:4, serverValue:35227}] to cluster0-shard-00-01.ky4n9.mongodb.net:27017
+2022-03-05 16:12:22.489  INFO 72340 --- [cluster-rtt-ClusterId{value='62233e8d657045531c14fac1', description='null'}-cluster0-shard-00-00.ky4n9.mongodb.net:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:33329}] to cluster0-shard-00-00.ky4n9.mongodb.net:27017
+2022-03-05 16:12:22.489  INFO 72340 --- [cluster-ClusterId{value='62233e8d657045531c14fac1', description='null'}-cluster0-shard-00-02.ky4n9.mongodb.net:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:31939}] to cluster0-shard-00-02.ky4n9.mongodb.net:27017
+2022-03-05 16:12:22.489  INFO 72340 --- [cluster-ClusterId{value='62233e8d657045531c14fac1', description='null'}-cluster0-shard-00-00.ky4n9.mongodb.net:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:5, serverValue:33329}] to cluster0-shard-00-00.ky4n9.mongodb.net:27017
+2022-03-05 16:12:22.490  INFO 72340 --- [cluster-ClusterId{value='62233e8d657045531c14fac1', description='null'}-cluster0-shard-00-02.ky4n9.mongodb.net:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=cluster0-shard-00-02.ky4n9.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=152870500, setName='atlas-136lsk-shard-0', canonicalAddress=cluster0-shard-00-02.ky4n9.mongodb.net:27017, hosts=[cluster0-shard-00-00.ky4n9.mongodb.net:27017, cluster0-shard-00-01.ky4n9.mongodb.net:27017, cluster0-shard-00-02.ky4n9.mongodb.net:27017], passives=[], arbiters=[], primary='cluster0-shard-00-01.ky4n9.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=7, topologyVersion=TopologyVersion{processId=62222c7f14d66fa1baa30659, counter=3}, lastWriteDate=Sat Mar 05 16:12:23 IST 2022, lastUpdateTimeNanos=1214983544691300}
+2022-03-05 16:12:22.490  INFO 72340 --- [cluster-ClusterId{value='62233e8d657045531c14fac1', description='null'}-cluster0-shard-00-00.ky4n9.mongodb.net:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=cluster0-shard-00-00.ky4n9.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=151789800, setName='atlas-136lsk-shard-0', canonicalAddress=cluster0-shard-00-00.ky4n9.mongodb.net:27017, hosts=[cluster0-shard-00-00.ky4n9.mongodb.net:27017, cluster0-shard-00-01.ky4n9.mongodb.net:27017, cluster0-shard-00-02.ky4n9.mongodb.net:27017], passives=[], arbiters=[], primary='cluster0-shard-00-01.ky4n9.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=7, topologyVersion=TopologyVersion{processId=622229efad1193a1184b7aa7, counter=4}, lastWriteDate=Sat Mar 05 16:12:23 IST 2022, lastUpdateTimeNanos=1214983544691400}
+2022-03-05 16:12:22.499  INFO 72340 --- [cluster-ClusterId{value='62233e8d657045531c14fac1', description='null'}-cluster0-shard-00-01.ky4n9.mongodb.net:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:3, serverValue:35330}] to cluster0-shard-00-01.ky4n9.mongodb.net:27017
+2022-03-05 16:12:22.499  INFO 72340 --- [cluster-ClusterId{value='62233e8d657045531c14fac1', description='null'}-cluster0-shard-00-01.ky4n9.mongodb.net:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=cluster0-shard-00-01.ky4n9.mongodb.net:27017, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=144793800, setName='atlas-136lsk-shard-0', canonicalAddress=cluster0-shard-00-01.ky4n9.mongodb.net:27017, hosts=[cluster0-shard-00-00.ky4n9.mongodb.net:27017, cluster0-shard-00-01.ky4n9.mongodb.net:27017, cluster0-shard-00-02.ky4n9.mongodb.net:27017], passives=[], arbiters=[], primary='cluster0-shard-00-01.ky4n9.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=7fffffff0000000000000086, setVersion=7, topologyVersion=TopologyVersion{processId=62222b31e6e04aaacdae61c6, counter=6}, lastWriteDate=Sat Mar 05 16:12:23 IST 2022, lastUpdateTimeNanos=1214983555418700}
+2022-03-05 16:12:22.500  INFO 72340 --- [cluster-ClusterId{value='62233e8d657045531c14fac1', description='null'}-cluster0-shard-00-01.ky4n9.mongodb.net:27017] org.mongodb.driver.cluster               : Setting max election id to 7fffffff0000000000000086 from replica set primary cluster0-shard-00-01.ky4n9.mongodb.net:27017
+2022-03-05 16:12:22.500  INFO 72340 --- [cluster-ClusterId{value='62233e8d657045531c14fac1', description='null'}-cluster0-shard-00-01.ky4n9.mongodb.net:27017] org.mongodb.driver.cluster               : Setting max set version to 7 from replica set primary cluster0-shard-00-01.ky4n9.mongodb.net:27017
+2022-03-05 16:12:22.500  INFO 72340 --- [cluster-ClusterId{value='62233e8d657045531c14fac1', description='null'}-cluster0-shard-00-01.ky4n9.mongodb.net:27017] org.mongodb.driver.cluster               : Discovered replica set primary cluster0-shard-00-01.ky4n9.mongodb.net:27017
+2022-03-05 16:12:22.519  INFO 72340 --- [cluster-rtt-ClusterId{value='62233e8d657045531c14fac1', description='null'}-cluster0-shard-00-02.ky4n9.mongodb.net:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:6, serverValue:31939}] to cluster0-shard-00-02.ky4n9.mongodb.net:27017
+2022-03-05 16:12:22.951  INFO 72340 --- [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2022-03-05 16:12:23.007  WARN 72340 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2022-03-05 16:12:23.010  INFO 72340 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-03-05 16:12:23.071  INFO 72340 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 50234 (http) with context path ''
+2022-03-05 16:12:23.072  INFO 72340 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 50234
+2022-03-05 16:12:23.081  INFO 72340 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2022-03-05 16:12:23.136  INFO 72340 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2022-03-05 16:12:23.141  INFO 72340 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-03-05 16:12:23.172  INFO 72340 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2022-03-05 16:12:23.173  INFO 72340 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2022-03-05 16:12:23.173  INFO 72340 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2022-03-05 16:12:23.173  INFO 72340 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2022-03-05 16:12:23.173  INFO 72340 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2022-03-05 16:12:23.173  INFO 72340 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2022-03-05 16:12:23.173  INFO 72340 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2022-03-05 16:12:23.376  INFO 72340 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-03-05 16:12:23.382  INFO 72340 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2022-03-05 16:12:23.388  INFO 72340 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2022-03-05 16:12:23.400  INFO 72340 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1646476943399 with initial instances count: 1
+2022-03-05 16:12:23.400  INFO 72340 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application AUTH-SERVICE with eureka with status UP
+2022-03-05 16:12:23.401  INFO 72340 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1646476943401, current=UP, previous=STARTING]
+2022-03-05 16:12:23.402  INFO 72340 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_AUTH-SERVICE/auth-service:52b79f637ecbafac8f94464a1441fc74: registering service...
+2022-03-05 16:12:23.435  INFO 72340 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_AUTH-SERVICE/auth-service:52b79f637ecbafac8f94464a1441fc74 - registration status: 204
+2022-03-05 16:12:23.498  INFO 72340 --- [main] c.roy.auth.AuthenticationWsApplication   : Started AuthenticationWsApplication in 3.697 seconds (JVM running for 4.385)
+2022-03-05 16:12:25.595  INFO 72340 --- [RMI TCP Connection(3)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-05 16:12:25.595  INFO 72340 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-03-05 16:12:25.596  INFO 72340 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-03-05 16:16:00.361  INFO 72340 --- [http-nio-auto-1-exec-1] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 16:16:00.723  INFO 72340 --- [http-nio-auto-1-exec-1] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:7, serverValue:35056}] to cluster0-shard-00-01.ky4n9.mongodb.net:27017
+2022-03-05 16:16:00.912  INFO 72340 --- [http-nio-auto-1-exec-1] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 16:16:00.929  INFO 72340 --- [http-nio-auto-1-exec-1] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 16:16:02.920  INFO 72340 --- [http-nio-auto-1-exec-2] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 16:16:03.025  INFO 72340 --- [http-nio-auto-1-exec-2] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 16:16:03.026  INFO 72340 --- [http-nio-auto-1-exec-2] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 16:16:03.991  INFO 72340 --- [http-nio-auto-1-exec-3] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 16:16:04.100  INFO 72340 --- [http-nio-auto-1-exec-3] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 16:16:04.101  INFO 72340 --- [http-nio-auto-1-exec-3] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 16:16:04.811  INFO 72340 --- [http-nio-auto-1-exec-4] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 16:16:04.915  INFO 72340 --- [http-nio-auto-1-exec-4] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 16:16:04.915  INFO 72340 --- [http-nio-auto-1-exec-4] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 16:16:05.605  INFO 72340 --- [http-nio-auto-1-exec-5] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 16:16:05.723  INFO 72340 --- [http-nio-auto-1-exec-5] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 16:16:05.724  INFO 72340 --- [http-nio-auto-1-exec-5] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 16:16:06.326  INFO 72340 --- [http-nio-auto-1-exec-6] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 16:16:06.440  INFO 72340 --- [http-nio-auto-1-exec-6] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 16:16:06.440  INFO 72340 --- [http-nio-auto-1-exec-6] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 16:16:06.971  INFO 72340 --- [http-nio-auto-1-exec-7] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 16:16:07.082  INFO 72340 --- [http-nio-auto-1-exec-7] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 16:16:07.082  INFO 72340 --- [http-nio-auto-1-exec-7] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 16:16:07.662  INFO 72340 --- [http-nio-auto-1-exec-9] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 16:16:07.767  INFO 72340 --- [http-nio-auto-1-exec-9] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 16:16:07.769  INFO 72340 --- [http-nio-auto-1-exec-9] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 16:16:08.271  INFO 72340 --- [http-nio-auto-1-exec-10] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 16:16:08.374  INFO 72340 --- [http-nio-auto-1-exec-10] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 16:16:08.375  INFO 72340 --- [http-nio-auto-1-exec-10] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 16:16:08.902  INFO 72340 --- [http-nio-auto-1-exec-8] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 16:16:09.006  INFO 72340 --- [http-nio-auto-1-exec-8] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 16:16:09.006  INFO 72340 --- [http-nio-auto-1-exec-8] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 16:16:09.548  INFO 72340 --- [http-nio-auto-1-exec-1] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 16:16:09.652  INFO 72340 --- [http-nio-auto-1-exec-1] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 16:16:09.652  INFO 72340 --- [http-nio-auto-1-exec-1] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 16:16:10.166  INFO 72340 --- [http-nio-auto-1-exec-2] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 16:16:10.269  INFO 72340 --- [http-nio-auto-1-exec-2] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 16:16:10.270  INFO 72340 --- [http-nio-auto-1-exec-2] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 16:16:10.881  INFO 72340 --- [http-nio-auto-1-exec-3] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 16:16:10.986  INFO 72340 --- [http-nio-auto-1-exec-3] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 16:16:10.987  INFO 72340 --- [http-nio-auto-1-exec-3] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 16:16:11.591  INFO 72340 --- [http-nio-auto-1-exec-4] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 16:16:11.721  INFO 72340 --- [http-nio-auto-1-exec-4] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 16:16:11.721  INFO 72340 --- [http-nio-auto-1-exec-4] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 16:16:12.222  INFO 72340 --- [http-nio-auto-1-exec-5] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 16:16:12.334  INFO 72340 --- [http-nio-auto-1-exec-5] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 16:16:12.335  INFO 72340 --- [http-nio-auto-1-exec-5] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 16:16:12.884  INFO 72340 --- [http-nio-auto-1-exec-6] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 16:16:12.988  INFO 72340 --- [http-nio-auto-1-exec-6] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 16:16:12.989  INFO 72340 --- [http-nio-auto-1-exec-6] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 16:16:13.549  INFO 72340 --- [http-nio-auto-1-exec-7] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 16:16:13.695  INFO 72340 --- [http-nio-auto-1-exec-7] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 16:16:13.695  INFO 72340 --- [http-nio-auto-1-exec-7] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 16:16:14.150  INFO 72340 --- [http-nio-auto-1-exec-9] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 16:16:14.256  INFO 72340 --- [http-nio-auto-1-exec-9] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 16:16:14.257  INFO 72340 --- [http-nio-auto-1-exec-9] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 16:16:14.791  INFO 72340 --- [http-nio-auto-1-exec-10] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 16:16:14.899  INFO 72340 --- [http-nio-auto-1-exec-10] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 16:16:14.900  INFO 72340 --- [http-nio-auto-1-exec-10] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 16:16:15.496  INFO 72340 --- [http-nio-auto-1-exec-8] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 16:16:15.604  INFO 72340 --- [http-nio-auto-1-exec-8] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 16:16:15.604  INFO 72340 --- [http-nio-auto-1-exec-8] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 16:17:14.260  INFO 72340 --- [http-nio-auto-1-exec-1] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 16:17:14.362  INFO 72340 --- [http-nio-auto-1-exec-1] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 16:17:14.362  INFO 72340 --- [http-nio-auto-1-exec-1] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 16:17:15.067  INFO 72340 --- [http-nio-auto-1-exec-2] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 16:17:15.162  INFO 72340 --- [http-nio-auto-1-exec-2] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 16:17:15.162  INFO 72340 --- [http-nio-auto-1-exec-2] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 16:17:15.819  INFO 72340 --- [http-nio-auto-1-exec-3] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 16:17:15.929  INFO 72340 --- [http-nio-auto-1-exec-3] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 16:17:15.930  INFO 72340 --- [http-nio-auto-1-exec-3] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 16:17:16.640  INFO 72340 --- [http-nio-auto-1-exec-4] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 16:17:16.743  INFO 72340 --- [http-nio-auto-1-exec-4] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 16:17:16.743  INFO 72340 --- [http-nio-auto-1-exec-4] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 16:17:17.456  INFO 72340 --- [http-nio-auto-1-exec-5] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 16:17:17.546  INFO 72340 --- [http-nio-auto-1-exec-5] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 16:17:17.562  INFO 72340 --- [http-nio-auto-1-exec-5] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 16:17:18.083  INFO 72340 --- [http-nio-auto-1-exec-6] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 16:17:18.186  INFO 72340 --- [http-nio-auto-1-exec-6] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 16:17:18.186  INFO 72340 --- [http-nio-auto-1-exec-6] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 16:17:18.836  INFO 72340 --- [http-nio-auto-1-exec-7] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 16:17:18.942  INFO 72340 --- [http-nio-auto-1-exec-7] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 16:17:18.942  INFO 72340 --- [http-nio-auto-1-exec-7] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 16:17:19.609  INFO 72340 --- [http-nio-auto-1-exec-9] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 16:17:19.713  INFO 72340 --- [http-nio-auto-1-exec-9] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 16:17:19.714  INFO 72340 --- [http-nio-auto-1-exec-9] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 16:17:20.388  INFO 72340 --- [http-nio-auto-1-exec-10] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 16:17:20.502  INFO 72340 --- [http-nio-auto-1-exec-10] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 16:17:20.502  INFO 72340 --- [http-nio-auto-1-exec-10] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 16:17:21.097  INFO 72340 --- [http-nio-auto-1-exec-8] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 16:17:21.215  INFO 72340 --- [http-nio-auto-1-exec-8] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 16:17:21.216  INFO 72340 --- [http-nio-auto-1-exec-8] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 16:17:23.179  INFO 72340 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-03-05 16:18:51.622  INFO 72340 --- [http-nio-auto-1-exec-2] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 16:18:51.728  INFO 72340 --- [http-nio-auto-1-exec-2] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 16:18:51.729  INFO 72340 --- [http-nio-auto-1-exec-2] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 16:18:52.342  INFO 72340 --- [http-nio-auto-1-exec-3] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 16:18:52.444  INFO 72340 --- [http-nio-auto-1-exec-3] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 16:18:52.444  INFO 72340 --- [http-nio-auto-1-exec-3] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 16:18:53.002  INFO 72340 --- [http-nio-auto-1-exec-4] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 16:18:53.105  INFO 72340 --- [http-nio-auto-1-exec-4] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 16:18:53.106  INFO 72340 --- [http-nio-auto-1-exec-4] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 16:18:53.672  INFO 72340 --- [http-nio-auto-1-exec-5] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 16:18:53.767  INFO 72340 --- [http-nio-auto-1-exec-5] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 16:18:53.767  INFO 72340 --- [http-nio-auto-1-exec-5] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 16:18:54.276  INFO 72340 --- [http-nio-auto-1-exec-6] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 16:18:54.400  INFO 72340 --- [http-nio-auto-1-exec-6] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 16:18:54.400  INFO 72340 --- [http-nio-auto-1-exec-6] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 16:18:54.864  INFO 72340 --- [http-nio-auto-1-exec-7] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 16:18:54.968  INFO 72340 --- [http-nio-auto-1-exec-7] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 16:18:54.969  INFO 72340 --- [http-nio-auto-1-exec-7] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 16:18:55.560  INFO 72340 --- [http-nio-auto-1-exec-9] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 16:18:55.666  INFO 72340 --- [http-nio-auto-1-exec-9] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 16:18:55.666  INFO 72340 --- [http-nio-auto-1-exec-9] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 16:18:56.463  INFO 72340 --- [http-nio-auto-1-exec-10] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 16:18:56.635  INFO 72340 --- [http-nio-auto-1-exec-10] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 16:18:56.636  INFO 72340 --- [http-nio-auto-1-exec-10] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 16:18:57.014  INFO 72340 --- [http-nio-auto-1-exec-8] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 16:18:57.138  INFO 72340 --- [http-nio-auto-1-exec-8] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 16:18:57.138  INFO 72340 --- [http-nio-auto-1-exec-8] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 16:18:57.697  INFO 72340 --- [http-nio-auto-1-exec-1] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 16:18:57.815  INFO 72340 --- [http-nio-auto-1-exec-1] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 16:18:57.816  INFO 72340 --- [http-nio-auto-1-exec-1] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 16:19:03.884  INFO 72340 --- [http-nio-auto-1-exec-2] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 16:19:04.002  INFO 72340 --- [http-nio-auto-1-exec-2] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 16:19:04.002  INFO 72340 --- [http-nio-auto-1-exec-2] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 16:19:04.356  INFO 72340 --- [http-nio-auto-1-exec-3] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 16:19:04.465  INFO 72340 --- [http-nio-auto-1-exec-3] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 16:19:04.465  INFO 72340 --- [http-nio-auto-1-exec-3] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 16:19:04.910  INFO 72340 --- [http-nio-auto-1-exec-4] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 16:19:05.040  INFO 72340 --- [http-nio-auto-1-exec-4] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 16:19:05.040  INFO 72340 --- [http-nio-auto-1-exec-4] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 16:19:05.338  INFO 72340 --- [http-nio-auto-1-exec-5] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 16:19:05.447  INFO 72340 --- [http-nio-auto-1-exec-5] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 16:19:05.447  INFO 72340 --- [http-nio-auto-1-exec-5] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 16:19:05.896  INFO 72340 --- [http-nio-auto-1-exec-6] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 16:19:06.006  INFO 72340 --- [http-nio-auto-1-exec-6] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 16:19:06.006  INFO 72340 --- [http-nio-auto-1-exec-6] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 16:19:06.383  INFO 72340 --- [http-nio-auto-1-exec-7] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 16:19:06.501  INFO 72340 --- [http-nio-auto-1-exec-7] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 16:19:06.501  INFO 72340 --- [http-nio-auto-1-exec-7] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 16:19:06.844  INFO 72340 --- [http-nio-auto-1-exec-9] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 16:19:06.947  INFO 72340 --- [http-nio-auto-1-exec-9] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 16:19:06.947  INFO 72340 --- [http-nio-auto-1-exec-9] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 16:19:07.274  INFO 72340 --- [http-nio-auto-1-exec-10] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 16:19:07.407  INFO 72340 --- [http-nio-auto-1-exec-10] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 16:19:07.408  INFO 72340 --- [http-nio-auto-1-exec-10] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 16:19:07.677  INFO 72340 --- [http-nio-auto-1-exec-8] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 16:19:07.781  INFO 72340 --- [http-nio-auto-1-exec-8] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 16:19:07.782  INFO 72340 --- [http-nio-auto-1-exec-8] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 16:19:08.137  INFO 72340 --- [http-nio-auto-1-exec-1] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 16:19:08.255  INFO 72340 --- [http-nio-auto-1-exec-1] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 16:19:08.255  INFO 72340 --- [http-nio-auto-1-exec-1] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 16:19:19.559  INFO 72340 --- [http-nio-auto-1-exec-2] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 16:19:19.664  INFO 72340 --- [http-nio-auto-1-exec-2] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 16:19:19.664  INFO 72340 --- [http-nio-auto-1-exec-2] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 16:19:20.419  INFO 72340 --- [http-nio-auto-1-exec-3] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 16:19:20.526  INFO 72340 --- [http-nio-auto-1-exec-3] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 16:19:20.526  INFO 72340 --- [http-nio-auto-1-exec-3] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 16:19:21.068  INFO 72340 --- [http-nio-auto-1-exec-4] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 16:19:21.160  INFO 72340 --- [http-nio-auto-1-exec-4] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 16:19:21.160  INFO 72340 --- [http-nio-auto-1-exec-4] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 16:19:21.770  INFO 72340 --- [http-nio-auto-1-exec-5] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 16:19:21.861  INFO 72340 --- [http-nio-auto-1-exec-5] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 16:19:21.861  INFO 72340 --- [http-nio-auto-1-exec-5] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 16:19:22.423  INFO 72340 --- [http-nio-auto-1-exec-6] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 16:19:22.527  INFO 72340 --- [http-nio-auto-1-exec-6] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 16:19:22.528  INFO 72340 --- [http-nio-auto-1-exec-6] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 16:19:22.976  INFO 72340 --- [http-nio-auto-1-exec-7] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 16:19:23.077  INFO 72340 --- [http-nio-auto-1-exec-7] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 16:19:23.077  INFO 72340 --- [http-nio-auto-1-exec-7] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 16:19:23.501  INFO 72340 --- [http-nio-auto-1-exec-9] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 16:19:23.616  INFO 72340 --- [http-nio-auto-1-exec-9] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 16:19:23.616  INFO 72340 --- [http-nio-auto-1-exec-9] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 16:19:23.973  INFO 72340 --- [http-nio-auto-1-exec-10] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 16:19:24.079  INFO 72340 --- [http-nio-auto-1-exec-10] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 16:19:24.079  INFO 72340 --- [http-nio-auto-1-exec-10] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 16:19:24.530  INFO 72340 --- [http-nio-auto-1-exec-8] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 16:19:24.664  INFO 72340 --- [http-nio-auto-1-exec-8] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 16:19:24.664  INFO 72340 --- [http-nio-auto-1-exec-8] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 16:19:25.055  INFO 72340 --- [http-nio-auto-1-exec-1] com.roy.auth.atlas.AtlasService          : retrieving user with email: debroy1@gmail.com
+2022-03-05 16:19:25.174  INFO 72340 --- [http-nio-auto-1-exec-1] c.r.auth.rest.AuthenticationController   : user is authenticated
+2022-03-05 16:19:25.174  INFO 72340 --- [http-nio-auto-1-exec-1] com.roy.auth.security.TokenUtil          : Generating JWT token inside generateToken() of com.roy.auth.security
+2022-03-05 16:20:02.964  INFO 72340 --- [RMI TCP Connection(16)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2022-03-05 16:20:02.964  INFO 72340 --- [RMI TCP Connection(16)-127.0.0.1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application AUTH-SERVICE with eureka with status DOWN
+2022-03-05 16:20:02.965  INFO 72340 --- [RMI TCP Connection(16)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1646477402965, current=DOWN, previous=UP]
+2022-03-05 16:20:02.965  INFO 72340 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_AUTH-SERVICE/auth-service:52b79f637ecbafac8f94464a1441fc74: registering service...
+2022-03-05 16:20:02.971  INFO 72340 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_AUTH-SERVICE/auth-service:52b79f637ecbafac8f94464a1441fc74 - registration status: 204
+2022-03-05 16:20:03.100  INFO 72340 --- [RMI TCP Connection(16)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2022-03-05 16:20:06.127  INFO 72340 --- [RMI TCP Connection(16)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2022-03-05 16:20:06.143  INFO 72340 --- [RMI TCP Connection(16)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_AUTH-SERVICE/auth-service:52b79f637ecbafac8f94464a1441fc74 - deregister  status: 200
+2022-03-05 16:20:06.204  INFO 72340 --- [RMI TCP Connection(16)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient

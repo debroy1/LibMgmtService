@@ -1,0 +1,9 @@
+# fetch properties from config server
+spring:
+  application:
+    name: user-service
+  profiles:
+    active: native
+  config:
+    import: optional:configserver:http://localhost:9090/
+    name: user-service

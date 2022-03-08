@@ -1,0 +1,48 @@
+# Server related properties
+server:
+  port: 9090
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+        - info
+        - beans
+        - health
+        - httptrace
+
+# app related properties
+spring:
+  application.name: config-server
+  profiles:
+    active: native
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: file:///C:/GitHub/ConfigServerLocal
+        git:
+          uri: https://github.com/debroy1/ConfigServer
+          username: debroy1@gmail.com
+          password: Infosys@123456
+          #skipSslValidation: true
+          #private-key: 
+          #clone-on-start: true
+
+# default custom properties for all micro-services
+token.secret: 746yrhfy849o4rE
+token.expiry: 300000
+auth-svc.url.authenticate: http://AUTH-SERVICE/api/authenticateJwt
+auth-svc.url.signup: /api/signup
+auth-svc.url.userauth: /api/authenticateUser
+auth-svc.url.jwtauth: /api/authenticateJwt
+actuator.url.path: /actuator/*
+gateway.ip: 192.168.1.15
+gateway.subnet: 192.168.1.0/24
+gateway.header.token: x-auth-signed-by
+gateway.header.token.value: InterSvcTknVal-WQDFGreenBrav0Zulu20220303
+
+# key for any encryption
+encrypt:
+  key: apiConfigKeyInConfigServer20220703

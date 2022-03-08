@@ -1,8 +1,9 @@
-# Profile to be used
-#spring.profiles.active=cloud
-
-server.port=8090
-spring.application.name=api-gateway
-eureka.client.service-url.defaultZone=http://localhost:8761/eureka
-spring.cloud.gateway.discovery.locator.enabled=true
-spring.cloud.gateway.discovery.locator.lower-case-service-id=true
+# fetch properties from config server
+spring:
+  application:
+    name: api-gateway
+  profiles:
+    active: native
+  config:
+    import: optional:configserver:http://localhost:9090/
+    name: api-gateway
