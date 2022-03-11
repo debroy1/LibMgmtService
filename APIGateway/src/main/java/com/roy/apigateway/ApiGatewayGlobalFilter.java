@@ -10,6 +10,7 @@ import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.server.reactive.ServerHttpResponse;
+import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.server.ServerWebExchange;
@@ -21,30 +22,40 @@ public class ApiGatewayGlobalFilter implements GlobalFilter {
 	private final Logger log = LoggerFactory.getLogger(getClass());
 	
 	@Value("${auth-svc.url.authenticate}")
-	public String authSvcAuthenticateUrl;
+	private String authSvcAuthenticateUrl;
 	@Value("${auth-svc.url.signup}")
-	public String authSvcSignupUrl;
+	private String authSvcSignupUrl;
 	@Value("${auth-svc.url.userauth}")
-	public String authSvcUserAuthUrl;
+	private String authSvcUserAuthUrl;
 	@Value("${auth-svc.url.jwtauth}")
-	public String authSvcJwtAuthUrl;
+	private String authSvcJwtAuthUrl;
 	@Value("${actuator.url.path}")
-	public String actuatorPathUrl;
+	private String actuatorPathUrl;
 	@Value("${gateway.header.token}")
-	public String gatewayHeaderToken;
+	private String gatewayHeaderToken;
 	@Value("${gateway.header.token.value}")
-	public String gatewayHeaderTokenValue;
+	private String gatewayHeaderTokenValue;
+	
+	private static final String TOPIC = "tweeter_tweets";	
 
 	@Autowired
 	private TokenUtil tokenUtil;
 
 	@Autowired
-	public RestTemplate restTemplate;
+	private RestTemplate restTemplate;
+	
+	@Autowired
+	private KafkaTemplate<String, String> kafka;
 
 	@Override
 	public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
 		String path = exchange.getRequest().getPath().toString();
 		log.info("Global filter intercepted -> " + path);
+		try {
+			kafka.send(TOPIC, path);
+		} catch (Exception e) {
+			log.error("Error sending kafka message: " + e.getMessage());
+		}
 
 		log.info("Printing headers");
 		HttpHeaders headers = exchange.getRequest().getHeaders();
